@@ -75,10 +75,13 @@ def my_policy(observation):
     Return 0 (push left) or 1 (push right) based on the observation.
     observation = [cart_pos, cart_vel, pole_angle, pole_ang_vel]
     """
-    # TODO: replace this random choice with your own rule
-    # Hint: if the pole is leaning right (positive angle), which way should the cart move?
+    
     cart_pos, cart_vel, pole_angle, pole_ang_vel = observation
-    return 0  # always push left — change this!
+    if pole_angle > 0:
+        return 1  # push right
+    else:
+        return 0  # push left
+    
 
 env = gym.make("CartPole-v1", render_mode="human")
 
