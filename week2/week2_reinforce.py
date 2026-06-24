@@ -147,6 +147,9 @@ def plot_returns(returns, window=10, filename="plots/cartpole_rewards.png"):
     plt.savefig(filename)
     plt.close()
 
+
+
 if __name__ == "__main__":
     returns, trained_policy = train_reinforce()
     plot_returns(returns)
+    np.save("reinforce_returns.npy", np.array(returns))
