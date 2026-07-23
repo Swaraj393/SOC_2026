@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import os
 from stable_baselines3 import PPO
-from week4_trading_env_v2 import TradingEnvV2
+from week4.week4_trading_env_v2 import TradingEnvV2
 
 
 def run_episode(env, model=None):
